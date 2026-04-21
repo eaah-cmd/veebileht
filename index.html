@@ -19,16 +19,17 @@
             overflow: hidden;
         }
         
-        /* Diagonaalne muster üle kogu tausta */
+        /* Vahelduva rütmiga diagonaalne muster */
         body::before {
             content: "";
             position: absolute;
-            top: -50%; left: -50%; right: -50%; bottom: -50%; /* Laiendatud ala, et pööre kataks servad */
+            top: -50%; left: -50%; right: -50%; bottom: -50%;
             opacity: 0.18;
             pointer-events: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M40 30 Q60 20 80 30 L85 90 Q60 100 35 90 Z'/%3E%3Cg transform='rotate(90, 150, 50)'%3E%3Cpath d='M140 30 Q160 20 180 30 L185 90 Q160 100 135 90 Z'/%3E%3C/g%3E%3Cpath d='M30 150 Q100 130 170 150 Q170 190 100 195 Q30 190 30 150'/%3E%3Ccircle cx='150' cy='150' r='15'/%3E%3Cg transform='rotate(-20, 100, 50)'%3E%3Cellipse cx='100' cy='40' rx='10' ry='25'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            background-size: 240px 240px;
-            transform: rotate(-45deg); /* Pööre diagonaali saavutamiseks */
+            /* SVG on ümber ehitatud nii, et elemendid on ruudustikus nihkes */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='white' stroke-width='2'%3E%3C!-- Grupp 1 --%3E%3Cpath d='M40 30 Q60 20 80 30 L85 90 Q60 100 35 90 Z'/%3E%3Ccircle cx='150' cy='50' r='12'/%3E%3C!-- Grupp 2 (nihkes ja teise asendiga) --%3E%3Cg transform='rotate(45, 50, 150)'%3E%3Cpath d='M40 140 Q60 130 80 140 L85 180 Q60 190 35 180 Z'/%3E%3C/g%3E%3Cellipse cx='150' cy='150' rx='20' ry='10' transform='rotate(-20, 150, 150)'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 200px 200px;
+            transform: rotate(-45deg);
             z-index: 0;
         }
 
