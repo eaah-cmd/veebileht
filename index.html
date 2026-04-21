@@ -9,35 +9,41 @@
             font-family: "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f4f4f4;
+            background-color: #f2f2f2; /* Helehall üldtaust */
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-        }
-        .container {
-            max-width: 600px;
-            width: 85%;
-            background: white;
-            padding: 60px 40px;
-            border-radius: 2px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            text-align: center;
             position: relative;
             overflow: hidden;
-            border: 1px solid #eee;
         }
-        /* Iittala-inspired minimalist motifs background */
-        .container::before {
+        
+        /* Valge muster hallil taustal (4% nähtavusega) */
+        body::before {
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             opacity: 0.04;
             pointer-events: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M30 20 Q50 10 70 20 L75 80 Q50 90 25 80 Z' fill='none' stroke='black' stroke-width='1'/%3E%3Ccircle cx='80' cy='15' r='10' fill='none' stroke='black' stroke-width='1'/%3E%3Cpath d='M10 60 Q20 50 40 60 T70 60' fill='none' stroke='black' stroke-width='1'/%3E%3C/svg%3E");
-            background-size: 150px 150px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M30 20 Q50 10 70 20 L75 80 Q50 90 25 80 Z' fill='none' stroke='white' stroke-width='1.5'/%3E%3Ccircle cx='80' cy='15' r='10' fill='none' stroke='white' stroke-width='1.5'/%3E%3Cpath d='M15 70 Q30 55 50 70 T85 70' fill='none' stroke='white' stroke-width='1.5'/%3E%3Cellipse cx='20' cy='30' rx='8' ry='15' fill='none' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E");
+            background-size: 180px 180px;
+            z-index: 0;
         }
+
+        .container {
+            max-width: 600px;
+            width: 85%;
+            background: white; /* Puhas valge tekstikast */
+            padding: 60px 40px;
+            border-radius: 2px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            border: 1px solid #ffffff;
+        }
+
         h1 {
             font-weight: 300;
             letter-spacing: 3px;
@@ -46,29 +52,29 @@
             font-size: 1.6rem;
             text-transform: uppercase;
         }
+
         .text-block {
             margin-bottom: 40px;
             text-align: center;
             font-size: 1.15rem;
             font-weight: 300;
-            color: #444;
-            position: relative;
-            z-index: 1;
+            color: #333;
         }
+
         .contact {
             margin-top: 50px;
             font-size: 1rem;
             letter-spacing: 1px;
-            position: relative;
-            z-index: 1;
         }
+
         a {
             color: #333;
             text-decoration: none;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #eee;
             padding-bottom: 2px;
             transition: all 0.3s ease;
         }
+
         a:hover {
             color: #000;
             border-bottom-color: #000;
@@ -84,7 +90,7 @@
         </div>
 
         <div class="contact">
-            <a href="mailto:eaah@eaah.ee">eaah@eaah.eu</a>
+            <a href="mailto:eaah@eaah.ee">eaah@eaah.ee</a>
         </div>
     </div>
 </body>
