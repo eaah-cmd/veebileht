@@ -9,7 +9,7 @@
             font-family: "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #e0e0e0;
+            background-color: #d1d1d1; /* Veidi sügavam hall, et valge muster tõeliselt säraks */
             margin: 0;
             display: flex;
             justify-content: center;
@@ -19,16 +19,16 @@
             overflow: hidden;
         }
         
-        /* Dünaamiline muster: erinevad suurused, vormid ja asendid */
+        /* Tihedam ja säravvalge diagonaalne muster */
         body::before {
             content: "";
             position: absolute;
             top: -50%; left: -50%; right: -50%; bottom: -50%;
-            opacity: 0.18;
+            opacity: 0.25; /* Tõstetud nähtavus, et valge oleks kirkam */
             pointer-events: none;
-            /* SVG sisaldab nüüd varieeruva mastaabiga vorme */
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cg fill='none' stroke='white' stroke-width='2'%3E%3C!-- Suur klassikaline vaas --%3E%3Cpath d='M50 40 Q80 25 110 40 L115 130 Q80 145 45 130 Z' transform='rotate(-10, 80, 80)'/%3E%3C!-- Väike keraamiline kera --%3E%3Ccircle cx='220' cy='60' r='12'/%3E%3C!-- Keskmine lai kauss, külili --%3E%3Cg transform='translate(180, 180) rotate(110)'%3E%3Cpath d='M-40 -20 Q0 -40 40 -20 Q40 10 0 15 Q-40 10 -40 -20'/%3E%3C/g%3E%3C!-- Kitsas pikk klaas, väike --%3E%3Cellipse cx='60' cy='220' rx='12' ry='28' transform='rotate(15, 60, 220)'/%3E%3C!-- Keskmine vaas, teistsugune vorm --%3E%3Cpath d='M220 200 Q240 190 260 200 L265 250 Q240 260 215 250 Z'/%3E%3C/g%3E%3C/svg%3E");
-            background-size: 280px 280px;
+            /* SVG jooned on nüüd täisvalged ja tihedama asetusega */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='white' stroke-width='2.5'%3E%3C!-- Suurem vaas --%3E%3Cpath d='M30 25 Q50 15 70 25 L75 80 Q50 90 25 80 Z' transform='rotate(-5, 50, 50)'/%3E%3C!-- Väike kera --%3E%3Ccircle cx='140' cy='40' r='10'/%3E%3C!-- Külili kauss --%3E%3Cg transform='translate(130, 130) rotate(80)'%3E%3Cpath d='M-25 -15 Q0 -30 25 -15 Q25 5 0 10 Q-25 5 -25 -15'/%3E%3C/g%3E%3C!-- Kitsas klaas --%3E%3Cellipse cx='40' cy='150' rx='8' ry='20' transform='rotate(20, 40, 150)'/%3E%3C!-- Teine vaasivorm --%3E%3Cpath d='M160 140 Q175 135 190 140 L195 180 Q175 190 155 180 Z'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 160px 160px; /* Väiksem number teeb mustri tihedamaks */
             transform: rotate(-45deg);
             z-index: 0;
         }
@@ -39,7 +39,7 @@
             background: #ffffff;
             padding: 75px 45px;
             border-radius: 2px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
             text-align: center;
             position: relative;
             z-index: 1;
@@ -88,7 +88,7 @@
             right: 0;
             text-align: center;
             font-size: 0.75rem;
-            color: #666;
+            color: #555;
             letter-spacing: 0.8px;
             z-index: 1;
         }
