@@ -19,16 +19,16 @@
             overflow: hidden;
         }
         
-        /* Vahelduva rütmiga diagonaalne muster */
+        /* Dünaamiline muster: erinevad suurused, vormid ja asendid */
         body::before {
             content: "";
             position: absolute;
             top: -50%; left: -50%; right: -50%; bottom: -50%;
             opacity: 0.18;
             pointer-events: none;
-            /* SVG on ümber ehitatud nii, et elemendid on ruudustikus nihkes */
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='white' stroke-width='2'%3E%3C!-- Grupp 1 --%3E%3Cpath d='M40 30 Q60 20 80 30 L85 90 Q60 100 35 90 Z'/%3E%3Ccircle cx='150' cy='50' r='12'/%3E%3C!-- Grupp 2 (nihkes ja teise asendiga) --%3E%3Cg transform='rotate(45, 50, 150)'%3E%3Cpath d='M40 140 Q60 130 80 140 L85 180 Q60 190 35 180 Z'/%3E%3C/g%3E%3Cellipse cx='150' cy='150' rx='20' ry='10' transform='rotate(-20, 150, 150)'/%3E%3C/g%3E%3C/svg%3E");
-            background-size: 200px 200px;
+            /* SVG sisaldab nüüd varieeruva mastaabiga vorme */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cg fill='none' stroke='white' stroke-width='2'%3E%3C!-- Suur klassikaline vaas --%3E%3Cpath d='M50 40 Q80 25 110 40 L115 130 Q80 145 45 130 Z' transform='rotate(-10, 80, 80)'/%3E%3C!-- Väike keraamiline kera --%3E%3Ccircle cx='220' cy='60' r='12'/%3E%3C!-- Keskmine lai kauss, külili --%3E%3Cg transform='translate(180, 180) rotate(110)'%3E%3Cpath d='M-40 -20 Q0 -40 40 -20 Q40 10 0 15 Q-40 10 -40 -20'/%3E%3C/g%3E%3C!-- Kitsas pikk klaas, väike --%3E%3Cellipse cx='60' cy='220' rx='12' ry='28' transform='rotate(15, 60, 220)'/%3E%3C!-- Keskmine vaas, teistsugune vorm --%3E%3Cpath d='M220 200 Q240 190 260 200 L265 250 Q240 260 215 250 Z'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 280px 280px;
             transform: rotate(-45deg);
             z-index: 0;
         }
@@ -37,9 +37,9 @@
             max-width: 600px;
             width: 85%;
             background: #ffffff;
-            padding: 70px 40px;
+            padding: 75px 45px;
             border-radius: 2px;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.12);
             text-align: center;
             position: relative;
             z-index: 1;
@@ -47,15 +47,15 @@
 
         h1 {
             font-weight: 300;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             color: #000;
-            margin-bottom: 50px;
+            margin-bottom: 55px;
             font-size: 1.6rem;
             text-transform: uppercase;
         }
 
         .text-block {
-            margin-bottom: 60px;
+            margin-bottom: 70px;
             text-align: center;
             font-size: 1.15rem;
             font-weight: 300;
@@ -63,32 +63,33 @@
         }
 
         .contact {
-            margin-top: 80px;
-            font-size: 1rem;
-            letter-spacing: 1px;
+            margin-top: 90px;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
         }
 
         a {
             color: #000;
             text-decoration: none;
             border-bottom: 1px solid #ddd;
-            padding-bottom: 2px;
+            padding-bottom: 3px;
             transition: all 0.3s ease;
         }
 
         a:hover {
             border-bottom-color: #000;
+            opacity: 0.7;
         }
 
         .copyright {
             position: absolute;
-            bottom: 20px;
+            bottom: 25px;
             left: 0;
             right: 0;
             text-align: center;
             font-size: 0.75rem;
             color: #666;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
             z-index: 1;
         }
     </style>
