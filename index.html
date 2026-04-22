@@ -19,60 +19,62 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 650px; /* Veidi laiem, et suurem logo mahuks paremini */
             width: 85%;
             background: #ffffff;
-            padding: 60px 45px 75px 45px;
+            padding: 80px 50px;
             border-radius: 2px;
             box-shadow: 0 25px 50px rgba(0,0,0,0.15);
             text-align: center;
             z-index: 1;
         }
 
-        /* Logo tekstilise pealkirja asemele */
+        /* Logo on nüüd märgatavalt suurem */
         .content-logo {
-            max-width: 240px; /* Saad siit logo suurust reguleerida */
+            max-width: 380px; /* Suurendatud 240px pealt 380px peale */
+            width: 100%;
             height: auto;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             display: inline-block;
         }
 
         .text-block {
-            margin-bottom: 70px;
             text-align: center;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 300;
             color: #222;
+            margin-bottom: 0; /* Eemaldame liigse tühimiku kasti alt */
         }
 
-        .contact {
-            margin-top: 60px;
-            font-size: 1.1rem;
-            letter-spacing: 1.5px;
-        }
-
-        a {
-            color: #000;
-            text-decoration: none;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 3px;
-            transition: all 0.3s ease;
-        }
-
-        a:hover {
-            border-bottom-color: #000;
-        }
-
-        .copyright {
+        /* Uus minimalistlik kontaktiosa lehe allosas */
+        .footer-info {
             position: absolute;
-            bottom: 25px;
+            bottom: 30px;
             left: 0;
             right: 0;
             text-align: center;
-            font-size: 0.7rem;
-            color: #666;
-            letter-spacing: 0.8px;
             z-index: 1;
+        }
+
+        .footer-email {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            color: #333;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-email:hover {
+            opacity: 0.6;
+        }
+
+        .copyright {
+            font-size: 0.7rem;
+            color: #777;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -84,14 +86,13 @@
         <div class="text-block">
             The mission of European Applied Art Heritage is to preserve, research, value, and internationally promote the heritage of European applied arts, with a particular focus on historical glass and ceramic art.
         </div>
-
-        <div class="contact">
-            <a href="mailto:eaah@eaah.eu">eaah@eaah.eu</a>
-        </div>
     </div>
 
-    <div class="copyright">
-        © Copyright European Applied Art Heritage. All rights reserved.
+    <div class="footer-info">
+        <a href="mailto:eaah@eaah.eu" class="footer-email">eaah@eaah.eu</a>
+        <div class="copyright">
+            © Copyright European Applied Art Heritage. All rights reserved.
+        </div>
     </div>
 
 </body>
