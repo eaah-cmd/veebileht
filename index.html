@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>European Applied Art Heritage</title>
+    
+    <link rel="icon" type="image/png" href="logo.png"> 
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         body {
             font-family: "Helvetica Neue", Arial, sans-serif;
@@ -29,7 +33,6 @@
             box-shadow: 0 25px 50px rgba(0,0,0,0.15);
             text-align: center;
             z-index: 1;
-            /* Hoiab kasti keskel, aga lubab jalusel olla allpool */
             margin: auto 0; 
         }
 
@@ -48,11 +51,10 @@
             color: #222;
         }
 
-        /* Jaluse info paigutus - surutud rohkem alla */
         .footer-info {
             width: 100%;
             text-align: center;
-            padding-bottom: 30px; /* Distants ekraani päris servast */
+            padding-bottom: 30px;
             padding-top: 20px;
         }
 
@@ -60,25 +62,18 @@
             margin-bottom: 15px;
             display: flex;
             justify-content: center;
-            gap: 40px; /* Suurem vahe ikoonide vahel */
+            gap: 40px;
         }
 
         .icon-link {
             color: #444;
-            /* Väiksem ja õhem välimus */
-            font-size: 1.2rem; 
+            font-size: 1.1rem; /* Veidi väiksem ja peenem */
             text-decoration: none;
             transition: opacity 0.3s ease;
-            font-weight: 100; /* Püüame sundida õhemat joont */
         }
 
         .icon-link:hover {
             opacity: 0.4;
-        }
-
-        /* Spetsiifiline korrigeerimine, et ikoonid tunduksid peenemad */
-        .fa-regular, .fa-brands {
-            stroke-width: 10px; /* Mõne brauseri jaoks lisatugi */
         }
 
         .copyright {
@@ -88,14 +83,9 @@
             text-transform: uppercase;
         }
 
-        /* Mobiili vaade - et seal ei oleks liiga suuri vahesid */
         @media (max-height: 700px) {
-            .container {
-                margin: 40px 0;
-            }
-            .footer-info {
-                position: static;
-            }
+            .container { margin: 40px 0; }
+            .footer-info { position: static; }
         }
     </style>
 </head>
