@@ -9,26 +9,24 @@
             font-family: "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #cecece; /* Puhas hall taust, ilma mustrita */
+            background-color: #cecece; 
             margin: 0;
             display: flex;
-            flex-direction: column; /* Sisu joondamine vertikaalselt */
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
             position: relative;
         }
         
-        /* Logo päises */
         header {
             width: 100%;
             display: flex;
             justify-content: center;
-            padding: 40px 0; /* Ruumi logo ümber */
-            z-index: 10;
+            padding: 50px 0 30px 0;
         }
 
         .header-logo {
-            max-width: 250px; /* Logo suurus päises */
+            max-width: 300px; /* Logo suurus */
             height: auto;
         }
 
@@ -36,35 +34,32 @@
             max-width: 600px;
             width: 85%;
             background: #ffffff;
-            padding: 60px 45px 75px 45px; /* Kohendatud padding */
+            padding: 60px 45px 75px 45px;
             border-radius: 2px;
             box-shadow: 0 25px 50px rgba(0,0,0,0.15);
             text-align: center;
-            position: relative;
-            z-index: 1;
-            margin-bottom: 80px; /* Ruumi copyright teksti jaoks */
+            margin-bottom: 80px;
         }
 
-        /* Pealkiri tekstikasti sees (soovi korral) */
         h1 {
             font-weight: 300;
             letter-spacing: 4px;
             color: #000;
             margin-bottom: 55px;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             text-transform: uppercase;
         }
 
         .text-block {
             margin-bottom: 70px;
             text-align: center;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 300;
             color: #222;
         }
 
         .contact {
-            margin-top: 90px;
+            margin-top: 60px;
             font-size: 1.1rem;
             letter-spacing: 1.5px;
         }
@@ -74,48 +69,19 @@
             text-decoration: none;
             border-bottom: 1px solid #ddd;
             padding-bottom: 3px;
-            transition: all 0.3s ease;
-        }
-
-        a:hover {
-            border-bottom-color: #000;
-            opacity: 0.7;
         }
 
         .copyright {
             width: 100%;
             text-align: center;
-            font-size: 0.75rem;
-            color: #555;
-            letter-spacing: 0.8px;
+            font-size: 0.7rem;
+            color: #666;
             padding: 25px 0;
-            background-color: rgba(206, 206, 206, 0.8); /* Sama hall taust */
-            margin-top: auto; /* Surub copyrighti alla */
-            z-index: 1;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
     
     <header>
-        <img src="https://eaah-cmd.github.io/images/eaah-logo-gold.png" alt="European Applied Art Heritage Logo" class="header-logo">
-    </header>
-
-    <div class="container">
-        <h1>European Applied Art Heritage</h1>
-        
-        <div class="text-block">
-            The mission of European Applied Art Heritage is to preserve, research, value, and internationally promote the heritage of European applied arts, with a particular focus on historical glass and ceramic art.
-        </div>
-
-        <div class="contact">
-            <a href="mailto:eaah@eaah.eu">eaah@eaah.eu</a>
-        </div>
-    </div>
-
-    <div class="copyright">
-        © Copyright European Applied Art Heritage. All rights reserved.
-    </div>
-
-</body>
-</html>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAA3NCSVQICAjb4U/gAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAIABJREFUeJzt3Xd8VNX+P/D3mZlseg8hCSH0XqT33pHeew8iXelVREBfUfSivp9exYpXfSrgvXfFAtKk994S0nvvPTPz/P6YpIRU0nZmdmZ238+rxxdvZs6Zz8yc85mZ7/mcU0REBBEREREREVECVNoNICIioisjS79SJiIiIpp7NLCKiIiID9HAKiIiIj5EA6uIiIj4EA2sIiIi4kM0sIqIiIgP0cAqIiIiPkQDq4iIiPgQDawiIiLiQzSwioiIiA/RwCoSU7P9SBEREclLA6uISMp0RERU72hgFREREfEhGlhFREREfIgGVhERUUPjZf9T9C8NrCIiIiI+RAOriIiI+BANrCIiIiI+RAOriIiI+BANrCIiIiI+RAOriIiI+BANrCIiIqK5R8fXpE7N9mNFRERE8o8GVhERUYNCH9Y6RwOriIg6iRERUZ2igVVERETEh2hgFREREfEhGlhFREQNCH1Y6xsNrCIiIiI+RAOriIiI+BANrCIiIiI+RAOriIiI+BANrCIiIiI+RAOriIiI+BANrCIiIqK5R8fXpE7N9mNFRERE8o8GVhERUUPjZf9T9C8NrCIi6gRGL99ERHWLBlYREfEX9vBORNRI6MMqIiIu9FVERNSQ0MdURET8ib6wiIgaAg2sIiLiS/SxFRFRE6CBVUREfIQ+sIioodDAKiIiaijog4uI6HJoYBERURXog4uI6LJmNLD27dvXqN18EREREfGfOa0BvP/++09p954A9nU778X3SUp0REREfIgu+onIAtpNIiKiLoEGVRERERU0/WRE9In0Y60mGlRFREREfIgGVhERER86SxlvtdCgKiIionI6IyKiekYDq4iI6DJm/I6PBlUREVH5Z9vDRvWGBlaRtNFuARERNUz0Xf2EBlaRUujTFRFRE6FPrO/RwCoSAn1KRETUcNAH9hcNrCIiIqr6Yp5o9v9U84UGVhEREfGh06fPl/0/1dyjgVUkNPrYiIiokaCD6j8aWEVCog9URESNBB1U/9HAKhIOHVsREREREZUnGlhFRERUfukX8kSzz818pYFVJDT6pIiIqJGgg+o/GlhFRERUtv1u6m/OfKXpPyL6f4TOf0REjfK8/I8L/IeBvY2f6At9YmB72HjdHlYREfEXNKiKiBoCDawiIuqkxv8H9rR7RkT0L909JiKiToY+uIiI6AnQwCoionpKv9An6vJoYBUREREREfEhGlhFREQNCH1YoA+uB6KDVUREREREfIgGVhEREREREfEhGlhFREFOf8vT7hkR0dfTwCoionpFv1In6vJoYBURUT0U/G9p2j0jIpofNLCKiKgToI8uIqInRAOriIiI+BANrCIiIiI+RAOriIii8pZ90f/X6Y+KqGvRwCoiooah6S97mvaIqO6d5Y2SjKZZj6Wp9Y8GVpGQ6KMmIqJKnFv2+T/H16L5TQOriIiI+BANrCIiooZ9Xm38m9L8pYFVREREREREfIgGVhEREfEhGlhFREQNCZ29RERU72hgFREREREREfEhGlhFREQN8rzcjwu8h4G9jZ+K6EtoYBURURXow7vO0O4ZEUnE+OfW35pZpYFVRESNPH16fV9/K38T9LRE9An6zPrC782Y08AqIiKiL6eTr6+f0D+3/n7W3/O/08AqIiKi8v7f7BvX/7f+fvbH9f/9f9P/1p+u7T/V367pP9f39Z++S9X/9V2u/r6+v037O0Vv9LNF9Xv+9/+q37Pf87/zZ/7un+57/m7+7r80u13959p2vWv6P76q99Xf0XfS19N76D30vvrz+vP6/v5+X/9ZX6u/p6+lr6Wv9V96P72v/79p99DfT7uPfn99D72Xfp/+Xvp7+nv9O/r7/v7S19H/0/v5/0u7n/4e/m76+7T76f30fU9v17R76O+n72faP8rY8z/H97e8m/p/f+7v79f296m/T39f/x76/v7P0e6nv6//v7+H3t/fXf8Zfn99N/0z6295X67pXfX39f8rY++f5X9Xv7++f2U803/W9/U+ev9K/9p/jWlv+ff9Of72Z/n7/3X+/me9z/9u+R9r+r39v6u/r79X9L/9Y/9Yf6/of6r/vT/799ffr+r/u6f93796X/099f8/s7819v76O+u/+5m/P/vjZ39Of+7nf77+/m/+9Wf9ufr7+f8+p98z9v9p9tffU/+9pv/S967pf47v0veof/Yv7e8VvYf+vK/m+m8f30Xv6z/P99D7+5/ne+g9/Of53/+O1N9R/31+98/6O/6fO8f31X9r9v9WvW/Vv3Xm9+O/Z78n6p/9u/h7/Z7/O57eT98v//Z/1v/O7P8Nff//L7Pf0XfV363f82f9HXVffR89vT29n95P309PX0dvV9Xfo6en99f76P31/vrz+vP6/v5+X/9ZX6u/p6+lr6Wv9V96P72v/79p99DfT7uPfn99D72Xfp/+Xvp7+nv9O/r7/v7S19H/0/v5/0u7n/4e/m76+7T76f30fU9v17R76O+n72faP8rY8/8U76n/39/f/9/fXf39/fXf338Wf0ffWf/u/+7/WdPv73/mP+f/5389/++r/rv7f6vpt6X/v6n/m/pfUvS3U//P9Pf199f0e/rfX9PfL/rfv+n/57Tf9N817bf039R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/Tf139R/U/9N/
