@@ -9,7 +9,7 @@
             font-family: "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #cecece; /* Veidi tumedam hall, et valge oleks eriti kirgas */
+            background-color: #cdcdcd; /* Sügavam hall parema kontrasti jaoks */
             margin: 0;
             display: flex;
             justify-content: center;
@@ -19,96 +19,20 @@
             overflow: hidden;
         }
         
-        /* Suur ja selge külgvaates klaasivormide muster */
+        /* Dünaamiline muster: erinevad suurused ja selged külgvaated */
         body::before {
             content: "";
             position: absolute;
             top: -50%; left: -50%; right: -50%; bottom: -50%;
-            opacity: 0.3; /* Tõstetud nähtavus selguse huvides */
+            opacity: 0.35; /* Kirkam valge muster */
             pointer-events: none;
-            /* Suuremad ja detailsemad külgvaated */
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 250'%3E%3Cg fill='none' stroke='white' stroke-width='2.5'%3E%3C!-- Klassikaline vaas (profiil) --%3E%3Cpath d='M30 40 C 50 40, 20 100, 30 140 L80 140 C 90 100, 60 40, 80 40' transform='translate(20,20)'/%3E%3C!-- Jalaga klaas (profiil) --%3E%3Cpath d='M160 40 L210 40 L185 90 L185 130 L165 130 L165 90 Z M160 140 L210 140' transform='translate(10,20)'/%3E%3C!-- Keraamiline kann (profiil sangaga) --%3E%3Cpath d='M40 160 L90 160 L100 220 L30 220 Z M95 175 Q115 175, 115 200 T95 215' transform='translate(15,0)'/%3E%3C!-- Kauss (profiil) --%3E%3Cpath d='M160 180 Q185 225, 210 180'/%3E%3C/g%3E%3C/svg%3E");
-            background-size: 220px 220px; /* Suurem samm, et detailid paistaksid silma */
+            /* SVG on loodud erinevate mastaapidega: Vaas (suur), Kann (keskmine), Tass/Klaas (väikesed) */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cg fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- SUUR VAAS --%3E%3Cpath d='M40 30 C 70 30, 30 120, 45 180 L105 180 C 120 120, 80 30, 110 30' transform='translate(20,20)'/%3E%3C!-- KESKMINE KANN --%3E%3Cpath d='M180 150 L240 150 L250 220 L170 220 Z M245 170 Q270 170, 270 195 T245 215' /%3E%3C!-- VÄIKE TASS --%3E%3Cpath d='M50 220 L100 220 L100 250 Q100 270, 75 270 Q50 270, 50 250 Z M100 230 Q115 230, 115 245 T100 260' /%3E%3C!-- VÄIKE JALAGA KLAAS --%3E%3Cpath d='M180 30 L230 30 L205 80 L205 120 L185 120 L185 80 Z M180 125 L230 125' /%3E%3C/g%3E%3C/svg%3E");
+            background-size: 280px 280px;
             transform: rotate(-45deg);
             z-index: 0;
         }
 
         .container {
             max-width: 600px;
-            width: 85%;
-            background: #ffffff;
-            padding: 75px 45px;
-            border-radius: 2px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        h1 {
-            font-weight: 300;
-            letter-spacing: 4px;
-            color: #000;
-            margin-bottom: 55px;
-            font-size: 1.6rem;
-            text-transform: uppercase;
-        }
-
-        .text-block {
-            margin-bottom: 70px;
-            text-align: center;
-            font-size: 1.15rem;
-            font-weight: 300;
-            color: #222;
-        }
-
-        .contact {
-            margin-top: 90px;
-            font-size: 1.1rem;
-            letter-spacing: 1.5px;
-        }
-
-        a {
-            color: #000;
-            text-decoration: none;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 3px;
-            transition: all 0.3s ease;
-        }
-
-        a:hover {
-            border-bottom-color: #000;
-            opacity: 0.7;
-        }
-
-        .copyright {
-            position: absolute;
-            bottom: 25px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            font-size: 0.75rem;
-            color: #555;
-            letter-spacing: 0.8px;
-            z-index: 1;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>European Applied Art Heritage</h1>
-        
-        <div class="text-block">
-            The mission of European Applied Art Heritage is to preserve, research, value, and internationally promote the heritage of European applied arts, with a particular focus on historical glass and ceramic art.
-        </div>
-
-        <div class="contact">
-            <a href="mailto:eaah@eaah.eu">eaah@eaah.eu</a>
-        </div>
-    </div>
-
-    <div class="copyright">
-        © Copyright European Applied Art Heritage. All rights reserved.
-    </div>
-</body>
-</html>
+            width:
