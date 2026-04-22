@@ -17,6 +17,7 @@
             align-items: center;
             min-height: 100vh;
             position: relative;
+            flex-direction: column;
         }
 
         .container {
@@ -28,8 +29,8 @@
             box-shadow: 0 25px 50px rgba(0,0,0,0.15);
             text-align: center;
             z-index: 1;
-            /* Suurendatud alumine marginaal, et tekitada distants ikoonidega */
-            margin-bottom: 60px;
+            /* Hoiab kasti keskel, aga lubab jalusel olla allpool */
+            margin: auto 0; 
         }
 
         .content-logo {
@@ -47,40 +48,54 @@
             color: #222;
         }
 
-        /* Jaluse info paigutus */
+        /* Jaluse info paigutus - surutud rohkem alla */
         .footer-info {
-            position: absolute;
-            bottom: 40px;
-            left: 0;
-            right: 0;
+            width: 100%;
             text-align: center;
-            z-index: 1;
+            padding-bottom: 30px; /* Distants ekraani päris servast */
+            padding-top: 20px;
         }
 
         .social-icons {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             display: flex;
             justify-content: center;
-            gap: 35px;
+            gap: 40px; /* Suurem vahe ikoonide vahel */
         }
 
         .icon-link {
-            color: #333;
-            font-size: 1.5rem;
+            color: #444;
+            /* Väiksem ja õhem välimus */
+            font-size: 1.2rem; 
             text-decoration: none;
-            transition: transform 0.3s ease, opacity 0.3s ease;
+            transition: opacity 0.3s ease;
+            font-weight: 100; /* Püüame sundida õhemat joont */
         }
 
         .icon-link:hover {
-            opacity: 0.5;
-            transform: translateY(-3px);
+            opacity: 0.4;
+        }
+
+        /* Spetsiifiline korrigeerimine, et ikoonid tunduksid peenemad */
+        .fa-regular, .fa-brands {
+            stroke-width: 10px; /* Mõne brauseri jaoks lisatugi */
         }
 
         .copyright {
-            font-size: 0.65rem;
-            color: #777;
-            letter-spacing: 1.2px;
+            font-size: 0.6rem;
+            color: #888;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
+        }
+
+        /* Mobiili vaade - et seal ei oleks liiga suuri vahesid */
+        @media (max-height: 700px) {
+            .container {
+                margin: 40px 0;
+            }
+            .footer-info {
+                position: static;
+            }
         }
     </style>
 </head>
