@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>European Applied Art Heritage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: "Helvetica Neue", Arial, sans-serif;
@@ -19,7 +20,7 @@
         }
 
         .container {
-            max-width: 650px; /* Veidi laiem, et suurem logo mahuks paremini */
+            max-width: 650px;
             width: 85%;
             background: #ffffff;
             padding: 80px 50px;
@@ -27,11 +28,12 @@
             box-shadow: 0 25px 50px rgba(0,0,0,0.15);
             text-align: center;
             z-index: 1;
+            /* Suurendatud alumine marginaal, et tekitada distants ikoonidega */
+            margin-bottom: 60px;
         }
 
-        /* Logo on nüüd märgatavalt suurem */
         .content-logo {
-            max-width: 380px; /* Suurendatud 240px pealt 380px peale */
+            max-width: 380px;
             width: 100%;
             height: auto;
             margin-bottom: 60px;
@@ -43,37 +45,41 @@
             font-size: 1.15rem;
             font-weight: 300;
             color: #222;
-            margin-bottom: 0; /* Eemaldame liigse tühimiku kasti alt */
         }
 
-        /* Uus minimalistlik kontaktiosa lehe allosas */
+        /* Jaluse info paigutus */
         .footer-info {
             position: absolute;
-            bottom: 30px;
+            bottom: 40px;
             left: 0;
             right: 0;
             text-align: center;
             z-index: 1;
         }
 
-        .footer-email {
-            display: block;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-            letter-spacing: 2px;
-            color: #333;
-            text-decoration: none;
-            transition: opacity 0.3s ease;
+        .social-icons {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
         }
 
-        .footer-email:hover {
-            opacity: 0.6;
+        .icon-link {
+            color: #333;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .icon-link:hover {
+            opacity: 0.5;
+            transform: translateY(-3px);
         }
 
         .copyright {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: #777;
-            letter-spacing: 0.8px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
         }
     </style>
@@ -89,7 +95,15 @@
     </div>
 
     <div class="footer-info">
-        <a href="mailto:eaah@eaah.eu" class="footer-email">eaah@eaah.eu</a>
+        <div class="social-icons">
+            <a href="mailto:eaah@eaah.eu" class="icon-link" title="Email us">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="https://www.instagram.com/europeanappliedartheritage" target="_blank" class="icon-link" title="Follow us on Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        
         <div class="copyright">
             © Copyright European Applied Art Heritage. All rights reserved.
         </div>
