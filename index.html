@@ -12,23 +12,10 @@
             background-color: #cecece; 
             margin: 0;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
             min-height: 100vh;
-        }
-        
-        header {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 50px 0 30px 0;
-        }
-
-        .header-logo {
-            max-width: 280px;
-            height: auto;
-            /* Kui pilti pole, siis see peidab tühja ikooni kasti */
-            display: block;
+            position: relative;
         }
 
         .container {
@@ -39,16 +26,15 @@
             border-radius: 2px;
             box-shadow: 0 25px 50px rgba(0,0,0,0.15);
             text-align: center;
-            margin-bottom: 80px;
+            z-index: 1;
         }
 
-        h1 {
-            font-weight: 300;
-            letter-spacing: 4px;
-            color: #000;
-            margin-bottom: 55px;
-            font-size: 1.4rem;
-            text-transform: uppercase;
+        /* Logo tekstilise pealkirja asemele */
+        .content-logo {
+            max-width: 240px; /* Saad siit logo suurust reguleerida */
+            height: auto;
+            margin-bottom: 50px;
+            display: inline-block;
         }
 
         .text-block {
@@ -70,27 +56,30 @@
             text-decoration: none;
             border-bottom: 1px solid #ddd;
             padding-bottom: 3px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            border-bottom-color: #000;
         }
 
         .copyright {
-            width: 100%;
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            right: 0;
             text-align: center;
             font-size: 0.7rem;
             color: #666;
             letter-spacing: 0.8px;
-            padding: 25px 0;
-            margin-top: auto;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
-    
-    <header>
-        <img src="logo.png" alt="" class="header-logo">
-    </header>
 
     <div class="container">
-        <h1>European Applied Art Heritage</h1>
+        <img src="logo.png" alt="European Applied Art Heritage" class="content-logo">
         
         <div class="text-block">
             The mission of European Applied Art Heritage is to preserve, research, value, and internationally promote the heritage of European applied arts, with a particular focus on historical glass and ceramic art.
