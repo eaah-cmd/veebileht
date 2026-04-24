@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>European Applied Art Heritage</title>
-    
     <link rel="icon" type="image/png" href="/favicon.png?v=2">
-    <link rel="shortcut icon" href="/favicon.ico?v=2">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         body {
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-family: "Georgia", "Times New Roman", serif; /* Klassikaline serif-font */
             line-height: 1.6;
             color: #333;
             background-color: #cecece; 
@@ -21,20 +18,17 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            position: relative;
             flex-direction: column;
         }
 
         .container {
-            max-width: 700px;
+            max-width: 750px;
             width: 85%;
             background: #ffffff;
             padding: 80px 50px;
             border-radius: 2px;
             box-shadow: 0 25px 50px rgba(0,0,0,0.15);
             text-align: center;
-            z-index: 1;
-            margin: auto 0; 
         }
 
         .content-logo {
@@ -42,21 +36,22 @@
             width: 100%;
             height: auto;
             margin-bottom: 60px;
-            display: inline-block;
         }
 
         .text-block {
             text-align: center;
-            font-size: 1.25rem;
-            font-weight: 300;
+            font-size: 1.35rem; /* Suurendatud font */
+            font-style: italic; /* Kursiiv lisab kunstipärasust */
+            font-weight: 400;
+            line-height: 1.8;
             color: #222;
+            padding: 0 20px;
         }
 
         .footer-info {
             width: 100%;
             text-align: center;
-            padding-bottom: 30px;
-            padding-top: 20px;
+            padding: 30px 0;
         }
 
         .social-icons {
@@ -69,13 +64,10 @@
         .icon-link {
             color: #444;
             font-size: 1.1rem;
-            text-decoration: none;
             transition: opacity 0.3s ease;
         }
 
-        .icon-link:hover {
-            opacity: 0.4;
-        }
+        .icon-link:hover { opacity: 0.4; }
 
         .copyright {
             font-size: 0.6rem;
@@ -83,37 +75,21 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
         }
-
-        @media (max-height: 700px) {
-            .container { margin: 40px 0; }
-            .footer-info { position: static; }
-        }
     </style>
 </head>
 <body>
-
     <div class="container">
         <img src="logo.png" alt="European Applied Art Heritage" class="content-logo">
-        
         <div class="text-block">
             The mission of European Applied Art Heritage is to preserve, research, value, and internationally promote the heritage of European applied arts, with a particular focus on historical glass and ceramic art.
         </div>
     </div>
-
     <div class="footer-info">
         <div class="social-icons">
-            <a href="mailto:eaah@eaah.eu" class="icon-link" title="Email us">
-                <i class="fa-regular fa-envelope"></i>
-            </a>
-            <a href="https://www.instagram.com/europeanappliedartheritage" target="_blank" class="icon-link" title="Follow us on Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
+            <a href="mailto:eaah@eaah.eu" class="icon-link" title="Email us"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.instagram.com/europeanappliedartheritage" target="_blank" class="icon-link" title="Follow us"><i class="fa-brands fa-instagram"></i></a>
         </div>
-        
-        <div class="copyright">
-            © Copyright European Applied Art Heritage. All rights reserved.
-        </div>
+        <div class="copyright">© Copyright European Applied Art Heritage. All rights reserved.</div>
     </div>
-
 </body>
 </html>
